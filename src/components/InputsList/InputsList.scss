@@ -1,0 +1,27 @@
+.inputs-list {
+    padding: 0 0 16px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    &__row-title {
+        flex-basis: 50%;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.86;
+        letter-spacing: 0.2px;
+        color: #e0f2f1;
+    }
+
+    &__row-content {
+        flex-basis: 144px;
+    }
+
+    &__input {}
+}

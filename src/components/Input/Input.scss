@@ -1,0 +1,62 @@
+.counter-input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__btn {
+        position: absolute;
+        display: inline-block;
+        box-shadow: none;
+        outline: 0;
+        border: 0;
+        border-radius: 100%;
+        width: 28px;
+        height: 28px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--decrement {
+            left: -14px;
+            background-image: url('../images/input-decrement-icon.svg');
+        }
+
+        &--increment {
+            right: -14px;
+            background-image: url('../images/input-increment-icon.svg');
+        }
+    }
+
+    &__input {
+        width: 144px;
+        max-width: 144px;
+        height: 72px;
+        border-radius: 36px;
+        background-color: #2f3f4b;
+        border: 0;
+        box-shadow: none;
+        outline: 0;
+        font-size: 36px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -1.8px;
+        text-align: center;
+        color: #72909d;
+        padding: 16px 41px;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            margin: 0;
+        }
+    }
+}

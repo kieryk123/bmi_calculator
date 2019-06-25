@@ -1,0 +1,17 @@
+<svg width="29px" height="30px" viewBox="0 0 29 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="02-Calculator" transform="translate(-88.000000, -181.000000)" stroke="#FFFFFF" stroke-width="3">
+            <g id="BMI" transform="translate(32.000000, 136.000000)">
+                <g id="male">
+                    <g id="Male-icon" transform="translate(53.000000, 40.000000)">
+                        <g transform="translate(18.662676, 18.425285) rotate(-135.000000) translate(-18.662676, -18.425285) translate(8.662676, 2.425285)">
+                            <circle id="Oval-6" cx="9.7123106" cy="9.7123106" r="9.7123106"></circle>
+                            <path d="M9.7123106,19.4246212 L9.7123106,31.5650095" id="Path-13"></path>
+                            <polyline id="Path-13" points="4.8561553 27.5182134 9.7123106 31.3626696 14.5684659 27.5182134"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

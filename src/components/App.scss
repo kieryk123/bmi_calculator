@@ -1,0 +1,51 @@
+@import "./Button/Button";
+@import "./Header/Header";
+@import "./GenderSwitcher/GenderSwitcher";
+@import "./InputsList/InputsList";
+@import "./Input/Input";
+@import "./Results/Results";
+
+@mixin breakpoint($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #37474f, #232f3c);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#root {
+    width: 375px;
+    height: 667px;
+    border: 2px solid white;
+    border-radius: 8px;
+
+    @include breakpoint(480px) {
+        border: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.app {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #37474f, #232f3c);
+    border-radius: 8px;
+    padding: 32px;
+}

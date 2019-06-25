@@ -1,0 +1,14 @@
+<svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="02-Calculator" transform="translate(-303.000000, -58.000000)" stroke="#FFFFFF" stroke-width="3">
+            <g id="refresh_btn" transform="translate(297.000000, 47.000000)">
+                <g id="Addnew.btn" transform="translate(0.000000, 1.000000)">
+                    <g id="Group" transform="translate(7.242641, 12.000000)">
+                        <path d="M16.7573593,24 C23.3847763,24 28.7573593,18.627417 28.7573593,12 C28.7573593,5.372583 23.3847763,0 16.7573593,0 C10.1299423,0 4.75735931,5.372583 4.75735931,12" id="Oval-7"></path>
+                        <polygon id="Rectangle" fill="#FFFFFF" transform="translate(5.000000, 13.242641) rotate(-315.000000) translate(-5.000000, -13.242641) " points="8 10.2426407 8 16.2426407 2 16.2426407 4.94199515 13.3006455"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
