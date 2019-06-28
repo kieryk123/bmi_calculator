@@ -8,27 +8,38 @@ import Button from './Button/Button.jsx';
 import Results from './Results/Results.jsx';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isResultsOpen: false
-        };
-    }
+    state = {
+        resultsVisibility: false
+    };
 
     changeValue = (key, value) => {
+        const { setHeight, setWeight, setAge } = this.props;
         if (isNaN(value)) return;
         value = parseFloat(value);
         if (value < 0) value = 0;
-        if (key === 'height') this.props.setHeight(value);
-        if (key === 'weight') this.props.setWeight(value);
-        if (key === 'age') this.props.setAge(value);
+
+        switch (key) {
+            case 'height':
+                setHeight(value);
+                break;
+            case 'weight':
+                setWeight(value);
+                break;
+            case 'age':
+                setAge(value);
+                break;
+        }
     }
 
     changeGender = gender => this.setState({ gender });
 
     calculateResult = () => {
-        const { height, weight, age, gender } = this.props;
-        if (height === 0 || weight === 0 || age === 0 || gender === '') return;
+        const { height, weight, age, gender, setBmi, setResult } = this.props;
+        const fieldsAreEmpty = !height || !weight || !age || gender.length === 0;
+
+        if (fieldsAreEmpty) {
+            return;
+        }
 
         const bmi = Number((weight / ((height / 100) ** 2))).toFixed(2);
         let result = '';
@@ -43,42 +54,36 @@ class App extends Component {
             result = 'Obese';
         }
 
-        this.props.setBmi(bmi);
-        this.props.setResult(result);
-        this.openResults();
+        setBmi(bmi);
+        setResult(result);
+        this.hideResults();
     }
 
-    closeResults = () => this.setState({ isResultsOpen: false });
+    showResults = () => this.setState({ resultsVisibility: false });
 
-    openResults = () => this.setState({ isResultsOpen: true });
+    hideResults = () => this.setState({ resultsVisibility: true });
 
     render() {
+        const { resultsVisibility } = this.state;
+        const { result, bmi, height, weight, age, resetValues, gender, setGender } = this.props;
+
         return (
             <div className="app">
                 {
-                    this.state.isResultsOpen &&
+                    resultsVisibility &&
                     <Results
-                        onClose={this.closeResults}
-                        results={{
-                            result: this.props.result,
-                            bmi: this.props.bmi
-                        }}
+                        onClose={this.showResults}
+                        results={{ result, bmi }}
                     />
                 }
-                <Header onBtnClick={this.props.resetValues}/>
+                <Header onBtnClick={resetValues}/>
                 <GenderSwitcher
-                    gender={this.props.gender}
-                    onChange={this.props.setGender}
+                    gender={gender}
+                    onChange={setGender}
                 />
                 <InputsList
                     onChange={this.changeValue}
-                    values={
-                        {
-                            height: this.props.height,
-                            weight: this.props.weight,
-                            age: this.props.age
-                        }
-                    }
+                    values={{ height, weight, age }}
                 />
                 <Button
                     onClick={() => this.calculateResult()}
